@@ -1,0 +1,10 @@
+# Node js - Node.js is a JavaScript runtime environment that allows JavaScript to run outside the browser. It is built on Google's V8 JavaScript engine and uses the libuv library. The V8 engine compiles and executes JavaScript code, while the libuv library handles asynchronous operations such as file system access, networking, and event-driven I/O.
+
+# Event Loop - The Event Loop is a mechanism in Node.js that continuously checks the callback queue and executes asynchronous callbacks when the call stack is empty. It enables Node.js to handle asynchronous operations such as file system I/O, networking, and timers without blocking the main thread.
+
+# Call Stack - The Call Stack is a stack data structure that stores the execution context of functions. It handles synchronous tasks and follows the LIFO (Last In, First Out) order.
+
+# CallBack Queue - The Callback Queue is a queue data structure that stores callback functions of completed asynchronous operations in FIFO (First In, First Out) order. The Event Loop continuously checks whether the Call Stack is empty. If the Call Stack is empty, it moves the callback function from the Callback Queue to the Call Stack for execution.
+
+# MicroTask Queue - The Microtask Queue is a queue that stores high-priority asynchronous callbacks like Promise callbacks. The Event Loop executes microtasks before executing callbacks from the Callback Queue.
+
