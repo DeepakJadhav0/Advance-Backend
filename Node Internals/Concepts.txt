@@ -6,5 +6,33 @@
 
 # CallBack Queue - The Callback Queue is a queue data structure that stores callback functions of completed asynchronous operations in FIFO (First In, First Out) order. The Event Loop continuously checks whether the Call Stack is empty. If the Call Stack is empty, it moves the callback function from the Callback Queue to the Call Stack for execution.
 
+e.g - setTimeout, setInterval, and I/O operations (fs.readFile, network requests).
+
 # MicroTask Queue - The Microtask Queue is a queue that stores high-priority asynchronous callbacks like Promise callbacks. The Event Loop executes microtasks before executing callbacks from the Callback Queue.
 
+e.g - promise() , queueMicrotask()
+
+# Event Emitters - Event Emitter in Node.js is used to create and handle custom events. on() is used to listen for an event, and emit() is used to trigger the event. When the event is triggered, the registered callback function runs.
+
+e.g - 
+import import EventEmitter from "events";
+
+const emmiter = EventEmitter()
+
+emmiter.on("greet" , ()=>{
+    console.log("Greet Called")
+})
+
+emmiter.emit("greet")
+ 
+# Libuv - libuv is a C library used to manage asynchronous tasks such as file I/O, networking, and timers. It uses a thread pool for certain operations (like file system I/O). Once the task is completed, the callback is pushed to the callback queue, where it is executed by the event loop.
+
+# Thread Pool - A thread pool is a collection of worker threads used to execute asynchronous tasks in the background. In Node.js, libuv uses the thread pool for tasks like file system operations, DNS lookups, and some cryptographic operations, allowing the main thread to remain free.
+
+# Non-blocking - Non-blocking means a task does not stop the execution flow. Instead, the task runs asynchronously, and the main thread continues executing other code until the operation is complete.
+
+e.g - fs.readFile() , setTimeout , HTTP Request
+
+# Streams - Streams allow Node.js to process data chunk by chunk, making it memory efficient for handling large files and network data.
+
+# Buffer - Buffer is a Node.js object used to store and manipulate binary data. It helps handle data streams efficiently when dealing with files and network operations.
