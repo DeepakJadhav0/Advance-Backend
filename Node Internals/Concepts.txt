@@ -36,3 +36,5 @@ e.g - fs.readFile() , setTimeout , HTTP Request
 # Streams - Streams allow Node.js to process data chunk by chunk, making it memory efficient for handling large files and network data.
 
 # Buffer - Buffer is a Node.js object used to store and manipulate binary data. It helps handle data streams efficiently when dealing with files and network operations.
+
+
