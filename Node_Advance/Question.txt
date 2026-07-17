@@ -1,0 +1,7 @@
+Q What is the Event Loop in Node.js?
+- The Event Loop is a mechanism in Node.js that allows it to handle asynchronous operations like I/O and network requests. It continuously monitors the Call Stack and the different queues. When the Call Stack is empty, the Event Loop takes the ready callbacks from the appropriate queue and executes them.
+
+Q What is the purpose of the Call Stack in JavaScript?
+- The Call Stack is a stack data structure used by JavaScript to keep track of function execution. It follows the LIFO (Last In, First Out) order. When a function is called, it is pushed onto the stack, and when it completes, it is removed from the stack.
+
+Q 
