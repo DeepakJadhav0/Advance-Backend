@@ -1,7 +1,6 @@
 import { UserDto } from "../dto/user.dto.js";
 import { user } from "../types/user.js";
-import bcrypt from "bcrypt"
-
+ 
 const users : user[]  = []
 
 export function getAllUsers(): UserDto[] {
@@ -15,14 +14,12 @@ export function findUserByEmail(email : string):boolean{
     return users.some(u => u.email === email)
 }
 
-export async function createUser(email : string , password : string ):Promise<number>{
-
-    const hashedPassword = await bcrypt.hash(password,10)
+export async function insertUser(email : string , hashPassword : string ):Promise<number>{
 
     const newUser : user =  {
         user_id : Date.now(),
-        email : email.toLocaleLowerCase().trim(),
-        password : hashedPassword
+        email : email.toLowerCase().trim(),
+        password : hashPassword
     }
 
     users.push(newUser)
